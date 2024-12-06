@@ -1,0 +1,66 @@
+{
+    "name": "basecodeoy/ulid",
+    "description": "A package to easily make use of ULIDs with Laravel Eloquent.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "BaseCode Oy",
+        "laravel",
+        "ulid"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/basecodeoy/ulid",
+    "support": {
+        "issues": "https://github.com/basecodeoy/ulid/issues",
+        "source": "https://github.com/basecodeoy/ulid",
+        "security": "https://github.com/basecodeoy/ulid/blob/main/.github/SECURITY.md"
+    },
+    "require": {
+        "php": "^8.3",
+        "basecodeoy/crate": "^1.0.0",
+        "illuminate/contracts": "^11.0"
+    },
+    "require-dev": {
+        "basecodeoy/standards": "^1.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BaseCodeOy\\Ulid\\": "src",
+            "BaseCodeOy\\Ulid\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        },
+        "audit": {
+            "abandoned": "report"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Ulid": "BaseCodeOy\\Ulid\\Facades\\Ulid"
+            },
+            "providers": [
+                "BaseCodeOy\\Ulid\\ServiceProvider"
+            ]
+        }
+    }
+}
